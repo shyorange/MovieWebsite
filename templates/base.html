@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block title %}{% endblock %}
+  </title>
+  <link rel="stylesheet" href="{{ url_for("static",filename="css/bootstrap.css") }}">
+  <link rel="stylesheet" href="{{ url_for("static",filename="css/base.css") }}">
+  <script type="text/javascript" src="{{ url_for("static",filename="js/bootstrap.js") }}"></script>
+{% block head %}{% endblock %}
+</head>
+<body>
+<div>
+  <nav class="navbar" id="navbar">
+{#  <div class="row">#}
+{#    本站图标#}
+    <div class="" id="tubiao">
+      <h3 align="center" style="margin-top: 10px" >图标</h3>
+    </div>
+{#    导航内容#}
+    <div class="" id="nav_li">
+      <ul class="nav navbar-nav">
+        <li><a href="#"><p>导航一</p></a></li>
+        <li><a href="#"><p>导航一</p></a></li>
+        <li><a href="#"><p>导航一</p></a></li>
+        <li><a href="#"><p>导航一</p></a></li>
+      </ul>
+    </div>
+{#    搜索框#}
+    <div class="" id="nav_form">
+    <form action="" class="navbar-form navbar-right">
+      <div class="form-group">
+        <input type="text" placeholder="输入电影名进行搜索" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-default">搜索</button>
+    </form>
+  </div>
+{#  </div>#}
+</nav>
+</div>
+
+<div id="content">
+{% block content %}{% endblock %}
+</div>
+</body>
+</html>

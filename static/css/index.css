@@ -1,0 +1,10 @@
+#big_item{
+    marrgin:0px;
+}
+#item{
+    margin: 0px;
+}
+#item>img{
+    max-width: 136px;
+    max-height: 190px;
+}

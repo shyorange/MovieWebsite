@@ -1,0 +1,51 @@
+html{
+    margin: 0px auto;
+    width: 100%;
+    background-color: black;
+    height: 100%;
+}
+body{
+    margin:10px auto;
+    width: 88%;
+    border-radius: 5px;
+}
+#navbar{
+    display: inline;
+    position: absolute;
+    width: 88%;
+    background-color: #9acfea;
+    margin-bottom: 10px;
+}
+#tubiao{
+    float: left;
+    width: 15%;
+}
+#nav_form{
+    float: right;
+    margin: 0px;
+}
+#nav_li{
+    float: left;
+    margin: 0px;
+    width: 61%;
+}
+#nav_li>ul{
+    width: 100%;
+}
+#nav_li>ul>li{
+    width: 25%;
+}
+#nav_li>ul>li>a>p{
+    text-align: center;
+    margin-bottom: 0px;
+}
+#content{
+    /*width: 50%;*/
+    /*height: 100%;*/
+    margin-top: 50px;
+    margin: 0px auto;
+    width: 960px;
+    padding-top: 60px;
+    font-family: Georgia;
+    font-size: 10px;
+}
