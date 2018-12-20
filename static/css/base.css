@@ -9,11 +9,13 @@ body{
     width: 88%;
     border-radius: 5px;
 }
+/*导航条相关的style*/
 #navbar{
     display: inline;
     position: absolute;
     width: 88%;
-    background-color: #9acfea;
+    /*height: 50px;*/
+    background-color: #c7ddef;
     margin-bottom: 10px;
 }
 #tubiao{
@@ -33,19 +35,33 @@ body{
     width: 100%;
 }
 #nav_li>ul>li{
-    width: 25%;
+    width: 50%;
+    text-align: center;
+}
+#drop_menu{
+    width: 100%;
 }
 #nav_li>ul>li>a>p{
     text-align: center;
     margin-bottom: 0px;
+    color: black;
+    font-size: medium;
 }
+/*主内容的style*/
 #content{
     /*width: 50%;*/
     /*height: 100%;*/
     margin-top: 50px;
+    padding-top: 20px;
     margin: 0px auto;
-    width: 960px;
+    width: 80%;
     padding-top: 60px;
     font-family: Georgia;
-    font-size: 10px;
+    font-size: 15px;
+}
+/*底部的style*/
+.copyright{
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    text-align: center;
 }

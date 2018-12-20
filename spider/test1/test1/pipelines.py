@@ -109,7 +109,7 @@ class MySQLASCYPipeline:
         return item;
 
     def insert_into(self,cursor,item):
-        sql = f'insert into movies(movie_name, movie_type,img_link,down_link,update_time) values ("{item["movie_name"]}","{item["movie_type"]}","{item["movie_image"]}","{item["movie_downlink"]}","{item["update_time"]}")';
+        sql = f'insert into dytt_movies(movie_name, movie_type,img_link,down_link,update_time) values ("{item["movie_name"]}","{item["movie_type"]}","{item["movie_image"]}","{item["movie_downlink"]}","{item["update_time"]}")';
         cursor.execute(sql);
 
     def handle_error(self,failure,item,spider):

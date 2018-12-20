@@ -7,11 +7,13 @@
   </title>
   <link rel="stylesheet" href="{{ url_for("static",filename="css/bootstrap.css") }}">
   <link rel="stylesheet" href="{{ url_for("static",filename="css/base.css") }}">
+  <script type="text/javascript" src="{{ url_for("static",filename="js/jquery.min.js") }}"></script>
   <script type="text/javascript" src="{{ url_for("static",filename="js/bootstrap.js") }}"></script>
 {% block head %}{% endblock %}
 </head>
 <body>
-<div>
+{#<div>#}
+{#  导航条#}
   <nav class="navbar" id="navbar">
 {#  <div class="row">#}
 {#    本站图标#}
@@ -21,10 +23,38 @@
 {#    导航内容#}
     <div class="" id="nav_li">
       <ul class="nav navbar-nav">
-        <li><a href="#"><p>导航一</p></a></li>
-        <li><a href="#"><p>导航一</p></a></li>
-        <li><a href="#"><p>导航一</p></a></li>
-        <li><a href="#"><p>导航一</p></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电影&nbsp;&nbsp;<span class="caret"></span></a>
+          <ul class="dropdown-menu" id="drop_menu">
+            <li><a href="#">喜剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">动作</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">科幻</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">剧情</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">恐怖</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">悬疑</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电视剧&nbsp;&nbsp;<span class="caret"></span></a>
+          <ul class="dropdown-menu" id="drop_menu">
+            <li><a href="#">喜剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">动作</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">科幻</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">剧情</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">恐怖</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">悬疑</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
 {#    搜索框#}
@@ -36,12 +66,18 @@
       <button type="submit" class="btn btn-default">搜索</button>
     </form>
   </div>
-{#  </div>#}
 </nav>
-</div>
+{#</div>#}
 
 <div id="content">
 {% block content %}{% endblock %}
+</div>
+
+<div class=footer>
+<div class=copyright>
+<P>本站提供的所有电影资源均来自互联网，所有版权皆属原公司所有，如果认为本站侵犯了您的版权，请告知我们，我们会立即删除。</P>
+  <P>Copyright © 2012-2018 www.XXXXXX.com &nbsp;|&nbsp; QQ：XXXXXXXXXXXX</P>
+</div>
 </div>
 </body>
 </html>

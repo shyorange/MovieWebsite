@@ -16,19 +16,19 @@ class Dytt:
         :return:
         """
         # 最新电影
-        new_sql = "select movie_name,update_time from movies where movie_type like '%最新电影%' and img_link <> '暂无' order by update_time desc limit 5";
+        new_sql = "select movie_name,update_time from dytt_movies where movie_type like '%最新电影%' and img_link <> '暂无' order by update_time desc limit 5";
         self.cursor.execute(new_sql);
         new_movie = self.cursor.fetchall();
         # 国内电视剧
-        gn_tv_sql = "select movie_name,update_time  from movies where movie_type like '%华语电视%' and img_link <> '暂无' order by update_time desc limit 5";
+        gn_tv_sql = "select movie_name,update_time  from dytt_movies where movie_type like '%华语电视%' and img_link <> '暂无' order by update_time desc limit 5";
         self.cursor.execute(gn_tv_sql);
         gn_tv = self.cursor.fetchall();
         # 日韩剧
-        rh_tv_sql = "select movie_name,update_time  from movies where movie_type like '%日韩电视%' and img_link <> '暂无' order by update_time desc limit 5";
+        rh_tv_sql = "select movie_name,update_time  from dytt_movies where movie_type like '%日韩电视%' and img_link <> '暂无' order by update_time desc limit 5";
         self.cursor.execute(rh_tv_sql);
         rh_tv = self.cursor.fetchall();
         # 欧美剧
-        om_tv_sql = "select movie_name,update_time  from movies where movie_type like '%欧美电视%' and img_link <> '暂无' order by update_time desc limit 5";
+        om_tv_sql = "select movie_name,update_time  from dytt_movies where movie_type like '%欧美电视%' and img_link <> '暂无' order by update_time desc limit 5";
         self.cursor.execute(om_tv_sql);
         om_tv = self.cursor.fetchall();
         # 总结
@@ -48,7 +48,7 @@ class Dytt:
         :param movie_name：要寻找的资源的名
         :return:
         """
-        sql = f"select movie_name,update_time  from movies where movie_name like '%{movie_name}%'";
+        sql = f"select movie_name,update_time  from dytt_movies where movie_name like '%{movie_name}%'";
         self.cursor.execute(sql);
         res = self.cursor.fetchall();
         self.__close_conn();

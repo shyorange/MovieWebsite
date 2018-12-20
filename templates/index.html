@@ -7,20 +7,22 @@
   <link rel="stylesheet" href="{{ url_for("static",filename="css/index.css") }}">
 {% endblock %}
 {% block content %}
-
+{#  各板块展示 #}
   {% if movies %}
     {% for key,value in movies.items() %}
       <div id="big_item" class="list-group">
-        {% if key=="new_movie" %}
-          <a href="#" class="list-group-item active">最新电影</a>
-          {% elif key=="gn_tv" %}
-            <a href="#" class="list-group-item active">华语电视剧</a>
-          {% elif key=="rh_tv" %}
-            <a href="#" class="list-group-item active">日韩电视剧</a>
-          {% elif key=="om_tv" %}
-            <a href="#" class="list-group-item active">欧美电视剧</a>
-        {% endif %}
-
+          <a href="#" class="list-group-item active">
+          {% if key=="new_movie" %}
+            最新电影
+           {% elif key=="gn_tv" %}
+            华语电视剧
+            {% elif key=="rh_tv" %}
+            日韩电视剧
+            {% elif key=="om_tv" %}
+            欧美电视剧
+            {% endif %}
+            <span class="badge">查看更多</span>
+          </a>
           {% for v in value %}
             <a href="#" class="list-group-item">
             {% if v["update_time"] %}
