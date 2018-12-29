@@ -3,6 +3,8 @@ import scrapy
 import copy;
 from ..items import Test1Item;
 
+"""爬取电影天堂的爬虫"""
+
 class TestmovieSpider(scrapy.Spider):
     name = 'testmovie'
     allowed_domains = ['dytt8.net','ygdy8.net']

@@ -70,13 +70,14 @@ DOWNLOADER_MIDDLEWARES = {
 # 将自定义的管道类加载进爬虫（数值越小优先级越高）
 ITEM_PIPELINES = {
     'test1.pipelines.Test1Pipeline': 300,
-    'test1.pipelines.MySQLASCYPipeline':400,
-    # 'test1.pipelines.MySQLPipeline':400,
+    'test1.pipelines.MySQLASCYPipeline':400,  # 异步写入数据库的类
+    # 'test1.pipelines.DownTTIMagePipeline':200,
+    # 'test1.pipelines.MySQLPipeline':400, # 非异步写入数据库的类
 }
 
 # 日志等级和日志文件的位置
-LOG_LEVEL = "ERROR"
-LOG_FILE = "log.txt"
+# LOG_LEVEL = "ERROR"
+# LOG_FILE = "log.txt"
 # 连接myusql数据库的各项配置信息
 HOST = 'localhost';
 PORT = 3306;
@@ -85,6 +86,8 @@ PASSWORD = 'root';
 DB = 'firstdb';
 CHARSET = "utf-8";
 
+# 指定下载图片的文件夹路径
+IMAGE_STORE = 'D:/ScrapyDownImages';
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

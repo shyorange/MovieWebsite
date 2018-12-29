@@ -6,6 +6,7 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+from .Proiexs_pool import ProiexsPool;
 
 
 class Test1SpiderMiddleware(object):
@@ -111,5 +112,9 @@ class SetUserAgent():
         :param spider: 哪个爬虫
         :return: 处理后的request
         """
+        # ip = ProiexsPool._get_random_ip();
         request.headers["User-Agent"]="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36";
+        # request.proxies =ip;
+        # print("使用的代理ip：",ip)
+        # request.meta["proxy"] =ip;
         # return request;

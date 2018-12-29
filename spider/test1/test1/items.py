@@ -7,7 +7,7 @@
 
 import scrapy
 
-# 要爬取的数据的容器
+# 电影天堂的Item类
 class Test1Item(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -19,5 +19,25 @@ class Test1Item(scrapy.Item):
     # 电影详情页的数据
     movie_image = scrapy.Field(); # 电影封面连接
     movie_downlink = scrapy.Field(); # 电影下载连接，一个列表
+
+# 天堂图片的Item类
+class TTimgItem(scrapy.Item):
+    image_class = scrapy.Field();  # 图片所属的分类名
+    detail_link = scrapy.Field(); # 详情页链接
+    image_link = scrapy.Field(); # 详情页内每个图片的链接
+    image_dir = scrapy.Field(); # 根据分类名获得文件夹名
+
+# 天天美剧的Item类
+class TTmeiju(scrapy.Item):
+    v_name = scrapy.Field();    # 电影名
+    v_img = scrapy.Field();     # 封面
+    v_actor = scrapy.Field();   # 主演
+    v_dir = scrapy.Field();     # 导演
+    v_reg = scrapy.Field();     # 地区
+    v_year = scrapy.Field();    # 年份
+    v_intr = scrapy.Field();    # 简介
+    video_links = scrapy.Field();   # 视频详情连接（视频连接或m3u8文件连接）
+
+
 
     

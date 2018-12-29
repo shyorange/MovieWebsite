@@ -1,4 +1,4 @@
-2018-12-18 10:07:58 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.tvb7.com/tvb/zuixinTVBju/2009/1031/2.html>
+2018-12-22 09:46:36 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.douban.com/>
 Traceback (most recent call last):
   File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\defer.py", line 1299, in _inlineCallbacks
     result = result.throwExceptionIntoGenerator(g)
@@ -6,43 +6,4 @@ Traceback (most recent call last):
     return g.throw(self.type, self.value, self.tb)
   File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
     defer.returnValue((yield download_func(request=request,spider=spider)))
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
-    current.result = callback(current.result, *args, **kw)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\endpoints.py", line 838, in startConnectionAttempts
-    "no results for hostname lookup: {}".format(self._hostStr)
-twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: www.tvb7.com.
-2018-12-18 10:08:09 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.tvb7.com/tvb/zuixinTVBju/2009/1130/30.html>
-Traceback (most recent call last):
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\defer.py", line 1299, in _inlineCallbacks
-    result = result.throwExceptionIntoGenerator(g)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\python\failure.py", line 393, in throwExceptionIntoGenerator
-    return g.throw(self.type, self.value, self.tb)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
-    defer.returnValue((yield download_func(request=request,spider=spider)))
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
-    current.result = callback(current.result, *args, **kw)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\endpoints.py", line 838, in startConnectionAttempts
-    "no results for hostname lookup: {}".format(self._hostStr)
-twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: www.tvb7.com.
-2018-12-18 10:08:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.tvb7.com/tvb/zuixinTVBju/2009/1216/36.html>
-Traceback (most recent call last):
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\defer.py", line 1299, in _inlineCallbacks
-    result = result.throwExceptionIntoGenerator(g)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\python\failure.py", line 393, in throwExceptionIntoGenerator
-    return g.throw(self.type, self.value, self.tb)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
-    defer.returnValue((yield download_func(request=request,spider=spider)))
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
-    current.result = callback(current.result, *args, **kw)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\endpoints.py", line 838, in startConnectionAttempts
-    "no results for hostname lookup: {}".format(self._hostStr)
-twisted.internet.error.DNSLookupError: DNS lookup failed: no results for hostname lookup: www.tvb7.com.
-2018-12-18 10:10:49 [scrapy.core.scraper] ERROR: Error downloading <GET http://act.shop.xunlei.com/guanyunchang/index.html?fref=act-017-938>
-Traceback (most recent call last):
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\internet\defer.py", line 1299, in _inlineCallbacks
-    result = result.throwExceptionIntoGenerator(g)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\twisted\python\failure.py", line 393, in throwExceptionIntoGenerator
-    return g.throw(self.type, self.value, self.tb)
-  File "d:\veryimportant\pythonprojects\flask\movieproject\venv\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
-    defer.returnValue((yield download_func(request=request,spider=spider)))
-twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion.>]
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure twisted.internet.error.ConnectionLost: Connection to the other side was lost in a non-clean fashion: Connection lost.>]
