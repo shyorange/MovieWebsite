@@ -9,53 +9,10 @@ body{
     width: 88%;
     border-radius: 5px;
 }
-/*导航条相关的style*/
-#navbar{
-    display: inline;
-    position: absolute;
-    width: 88%;
-    /*height: 50px;*/
-    background-color: #c7ddef;
-    margin-bottom: 10px;
-}
-#tubiao{
-    float: left;
-    width: 15%;
-}
-#nav_form{
-    float: right;
-    margin: 0px;
-}
-#nav_li{
-    float: left;
-    margin: 0px;
-    width: 61%;
-}
-#nav_li>ul{
-    width: 100%;
-}
-#nav_li>ul>li{
-    width: 50%;
-    text-align: center;
-}
-#drop_menu{
-    width: 100%;
-}
-#nav_li>ul>li>a>p{
-    text-align: center;
-    margin-bottom: 0px;
-    color: black;
-    font-size: medium;
-}
 /*主内容的style*/
 #content{
-    /*width: 50%;*/
-    /*height: 100%;*/
-    margin-top: 50px;
-    padding-top: 20px;
     margin: 0px auto;
     width: 80%;
-    padding-top: 60px;
     font-family: Georgia;
     font-size: 15px;
 }

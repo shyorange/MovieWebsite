@@ -1,6 +1,8 @@
 # coding=utf-8
 # __author__ : "shyorange"
 # __date__ :  2018/12/18
+
+import math;
 import pymysql;
 from pymysql.cursors import DictCursor
 
@@ -57,6 +59,29 @@ class Dytt:
         else:
             return None;
 
+    # 返回数据给更多分类
+    def category_get(self,type,category,page_num):
+        """
+        :param type: 类型（电影，电视剧）
+        :param category: 分类名（科幻，动作，喜剧，日剧，韩剧.......）
+        :param page_num: 页码，每页返回30条
+        :return:
+        """
+        page_count = 0;
+        res = None;
+        try:
+            count_sql = f"select count(*) from dytt_movies where movie_type like '%{type}%' and movie_name like '%{category}%'";
+            self.cursor.execute(count_sql);
+            page_count = math.ceil(self.cursor.fetchall()[0]["count(*)"]//30);
+            sql = f"select * from dytt_movies where movie_type like '%{type}%' and movie_name like '%{category}%' order by update_time desc limit {(page_num-1)*30},{page_num*30}";
+            self.cursor.execute(sql);
+            res = self.cursor.fetchall();
+        except Exception:
+            self.conn.rollback();
+        finally:
+            self.__close_conn();
+        return page_count,res;
+
     def __close_conn(self):
         self.conn.commit();
         self.cursor.close();
@@ -64,6 +89,5 @@ class Dytt:
 
 if __name__ == '__main__':
     dy = Dytt();
-    # res = dy.search_get("海王");
-    res = dy.index_get();
-    print(res);
+    page,res = dy.category_get("电影","悬疑",4)
+    print(page,type(res));

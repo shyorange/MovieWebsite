@@ -12,63 +12,70 @@
 {% block head %}{% endblock %}
 </head>
 <body>
-{#<div>#}
 {#  导航条#}
-  <nav class="navbar" id="navbar">
-{#  <div class="row">#}
-{#    本站图标#}
-    <div class="" id="tubiao">
-      <h3 align="center" style="margin-top: 10px" >图标</h3>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('index') }}">网站图标</a>
     </div>
-{#    导航内容#}
-    <div class="" id="nav_li">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('index') }}">首页 <span class="sr-only">(current)</span></a></li>
+
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电影&nbsp;&nbsp;<span class="caret"></span></a>
-          <ul class="dropdown-menu" id="drop_menu">
-            <li><a href="#">喜剧</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">动作</a></li>
-            <li role="separator" class="divider"></li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电影 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
             <li><a href="#">科幻</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">剧情</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">恐怖</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">悬疑</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电视剧&nbsp;&nbsp;<span class="caret"></span></a>
-          <ul class="dropdown-menu" id="drop_menu">
             <li><a href="#">喜剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">悬疑</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">动作</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">科幻</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">剧情</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">恐怖</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">悬疑</a></li>
+            <li><a href="">剧情</a></li>
           </ul>
         </li>
       </ul>
-    </div>
-{#    搜索框#}
-    <div class="" id="nav_form">
-    <form action="" class="navbar-form navbar-right">
-      <div class="form-group">
-        <input type="text" placeholder="输入电影名进行搜索" class="form-control">
-      </div>
-      <button type="submit" class="btn btn-default">搜索</button>
-    </form>
-  </div>
-</nav>
-{#</div>#}
+      <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电视剧 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">华语电视剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">欧美电视剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">日韩电视剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">日剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">韩剧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="">其他</a></li>
+          </ul>
+        </li>
+        <li><a href="#">漫画</a></li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="搜索想看的">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
 
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+{# 主内容 #}
 <div id="content">
 {% block content %}{% endblock %}
 </div>

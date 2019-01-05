@@ -1,3 +1,18 @@
-<html>
 {#  该文件是不同类别的电影的分类页面  #}
-</html>
+{% extends "base.html" %}
+{# 标题 #}
+{% block title %}
+{{ leibie }}
+{% endblock %}
+
+{# 头部标签内 #}
+{% block head %}
+
+{% endblock %}
+
+{# 主内容 #}
+{% block content %}
+<h1>更多的电影展示页面</h1>
+  <h3>页数{{ page_count }}</h3>
+  <p>{{ movies }}</p>
+{% endblock %}
